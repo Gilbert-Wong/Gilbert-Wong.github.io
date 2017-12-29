@@ -19,6 +19,9 @@ links:
   - name:         关于
     url:          /about
     external:     false
+  - name:         标签
+    url:          /tags
+    external:     false
 # ------------ CONFIGURABLE END ------------
 
 #permalink:        /:categories/:title.html

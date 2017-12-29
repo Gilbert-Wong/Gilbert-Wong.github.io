@@ -3,6 +3,13 @@ layout: blog
 title: 关于Gilbert
 description: "关于Gilbert博客角落自述"
 data: 2017-08-05 09:19:11
+tags: 
+- Gilbert
+- 简述
+- 关于
+- Liber
+- Xue
+- 坐井观天阔
 redirect_from:
   - /about/
 ---
