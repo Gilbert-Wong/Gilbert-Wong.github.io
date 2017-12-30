@@ -4,6 +4,7 @@ istop: true
 background-image: /images/2017-12-29-ttrssdeploy-1.png
 title: tinyrss 在 ubuntu 16.04 上的部署
 date: 2017-12-30
+category: 运维
 tags:
 - ubuntu
 - tinyrss
