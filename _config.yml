@@ -1,7 +1,7 @@
 # ----------- CONFIGURABLE START -----------
 title:            "Gilbert blog"
 description:      ""
-url:              https://gilbert-wong.github.io # 域名
+url:              https://blog.gilbertwong.co # 域名
 signoff:          "Gilbert" # Your name
 google_analytics: UA-101222464-1
 share:            true 
