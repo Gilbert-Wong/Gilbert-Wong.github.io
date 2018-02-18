@@ -31,11 +31,13 @@ tags:
 
 ## 注意
 如果你和我一样，在 github 上都是用 jekyll 构建静态博客的话，请将 _config.yml 配置文件中的
-``` ruby
+```
 url:              https://gilbert-wong.github.io # 域名
 ```
+
 改为
-``` ruby
+
+```
 url:              https://blog.gilbertwong.co # 域名
 ```
 
