@@ -238,3 +238,6 @@ over_write([],_) ->
  blog:rename_males("pwd").
 {atomic,1}
  ```
+
+##  总结
+ Mneisa 的基本使用大概就是这样了，和 SQL 关系型数据库的差别还是不小的，工具链也远远没有 sql 数据库来的完备，但我个人还是觉得 QLC 的表达能力是要比 sql 语句来的简洁明晰的。
