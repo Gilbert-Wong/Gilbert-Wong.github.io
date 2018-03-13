@@ -80,4 +80,6 @@ s-kostyaev 的配置可以直接看他的 github 仓库: [s-kostyaev/ivy-erlang-
 
  注意：
  
- 如果你是 mac 用户，请使用 homebrew  `brew uninstall sed` 和 `brew install gnu-sed --with-default-names`。　 `ivy-erlang-complete` 的包依赖的是 `gnu-sed` 而不是 Mac 自带的 `bsd-sed`。　 homebrew 默认安装的 sed 名称是 gsed。这里设定参数重新安装一下 sed 。同时在自己的 shell 配置里设定一下 `gnu-sed`  的 path 就没问题了。
+ 如果你是 mac 用户，请使用 homebrew  `brew uninstall sed` 和 `brew install gnu-sed --with-default-names`。　 `ivy-erlang-complete` 的包依赖的是 `gnu-sed` 而不是 Mac 自带的 `bsd-sed`。 目前`ivy-erlang-complete` 的开发者还没有针对`bsd-sed` 做适配。直接使用`bsd-sed` 会导致 erlang 代码无法正确补全。 
+ 
+ homebrew 默认安装的 sed 名称是 gsed。这里设定参数重新安装一下 sed 。同时在自己的 shell 配置里设定一下 `gnu-sed`  的 path 就没问题了。
