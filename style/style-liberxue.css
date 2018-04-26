@@ -48,7 +48,7 @@ a:focus::before {
 	-moz-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
 	transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
 	opacity: 1;
-}   
+}
 ul,ol{padding-left:30px;}
 ul li>:first-child,ol li>:first-child,ul li ul:first-of-type,ol li ol:first-of-type,ul li ol:first-of-type,ol li ul:first-of-type{margin-top:0;}
 li{word-wrap:break-word;}
