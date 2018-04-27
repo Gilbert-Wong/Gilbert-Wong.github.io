@@ -31,7 +31,7 @@ tags:
  
 ## gen_server 使用示例 
 
-```erlang
+~~~ erlang
 -module(gen_server_example).
 -behaviour(gen_server).
 
@@ -72,7 +72,7 @@ free(Ch, {Alloc, Free} = Channels) ->
         false ->
             Channels
     end.
-```
+~~~
 
 ## gen_server 代码解释
  start_link/0 会调用 gen_server:start_link/4 该函数可以生成并连接到一个新的 gen_server 进程。

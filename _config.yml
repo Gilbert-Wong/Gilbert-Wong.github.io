@@ -9,11 +9,6 @@ share:            true
 paginate: 15
 paginate_path: "gilbertpage:num"
 plugins: [jekyll-paginate]
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
 links:
   - name:         首页
     url:          /

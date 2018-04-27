@@ -4,6 +4,7 @@
     <head>
         <meta content='{{ page.title }} - {{ site.title }}' name='title' />
         <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
+        <link href="/style/highlight_github.css" rel="stylesheet"/>
         <title>{{ page.title }} - {{ site.title }}</title>
         {% include head.html %}
     </head>
@@ -218,7 +219,5 @@
          };
          postDirectoryBuild();
         </script>
-        <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-        <script >lang=hljs.initHighlightingOnLoad();</script>
     </body>
 </html>
