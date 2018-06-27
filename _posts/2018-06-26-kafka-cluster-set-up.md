@@ -1,6 +1,6 @@
 ---
 title: apache kafka 搭建教程
-date: 2018-23-26
+date: 2018-06-26
 category: 
 - Management information system
 tags:
