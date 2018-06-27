@@ -1,5 +1,5 @@
 ---
-title: emqttd 工作总结（1）
+title: emqttd 维护笔记(1)
 date: 2018-06-13
 category: 
 - Work
@@ -54,6 +54,3 @@ case maps:find(Topic, SubMap) of
 ~~~
 
 问题解决!
-
-# 致谢
-多谢公司前辈刘新宇在解决本问题时给我的指导和帮助，让我学到了很多东西。　
