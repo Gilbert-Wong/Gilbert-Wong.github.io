@@ -1,5 +1,5 @@
 ---
-title: mqtt 与 kafka
+title: Mqtt 与 Kafka
 date: 2018-07-18
 category: 
 - Mqtt
@@ -7,8 +7,6 @@ tags:
 - mqtt
 - kafka
 ---
-
-# MQTT 与 Kafka
 
 MQTT 与 Kafka 是完全不同的两个东西， MQTT 是协议，是一个技术标准，由 OASIS 技术委员会的成员（其成员多数为 IBM 和微软的顶级工程师）制订，而 kafka 是已经实现的开源流处理平台，最早由 LinkedIn 开发，于 2011 年开源后交给 [Apache Incubator](https://zh.wikipedia.org/wiki/Apache_Incubator)孵化后成为了 Apache 软件基金会的顶级项目。
 
