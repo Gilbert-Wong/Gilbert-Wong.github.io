@@ -74,18 +74,28 @@ free(Ch, {Alloc, Free} = Channels) ->
 
 ## gen_server 代码解释
  start_link/0 会调用 gen_server:start_link/4 该函数可以生成并连接到一个新的 gen_server 进程。
+
  start_link/4 中的第一个参数 {local, gen_server_example} 指定了进程的名字， 意为注册一个名为 gen_server_example 的 gen_server 进程。如果没有指定名字的话， gen_server 进程不会被创建。 gen_server 还可以以 {global, Name} 的方式创建，此时 gen_server 进程会由 global:register_name/2 来注册。
+
  第二个参数 gen_server_example 是回调模块的名称，回调模块即回调函数所在的模块。
+
  第三个参数是用来传递给回调函数的参数列表。
+
  第四个参数是用来选项列表。
+
  
  如果名字注册成功了，新的 gen_server 进程会调用 gen_server_example 中的 init 函数。
  
  gen_server:start_link/4 是同步函数，直到 gen_server 进程创建完成且准备好接收请求的时候它才会返回。
+
  如果 gen_server 进程是监督树的一部分，那么就必须使用 gen_server:start_link/4 来创建，如果只是创建一个单独的 gen_server 进程，那么应该使用 gen_server:start 去创建。
+
  同步请求 alloc 函数将会由 gen_server:call/2 来实现。alloc 也是一个请求，会以消息传递的形式发送给 gen_server。 当请求收到的时候，gen_server 会调用 handle_call(Request, From, State) 函数，该函数会返回一个元组 {reply, Reply, State1}, Reply  就是 gen_server 返回给客户端的内容，State1 是 gen_server 状态的值。
+
  异步请求 free 函数是由 gen_server:cast/2 实现的。 free 请求也会以消息传递的形式发送给genserver:cast, 然后返回 ok。当请求接收到的时候，gen_server 调用 handle_cast(Request, State)函数。该函数会随之返回一个元组{noreply, State1}。
+
  如果 gen_server 进程是监督树的一部分, 那就没有必要使用停止函数，gen_server 进程会被监督者进程自动终结。如果需要在进程终结前进行清理的话，gen_server 进程会在接收到关闭指令时调用回调函数 terminate(shutdown, State)。 
+
  如果 gen_server 进程是一个独立进程，那么就需要专门写一个 stop 函数去终止它。
  
  如果 gen_server 进程只是接收消息而不是接收请求，就必须去实现回调函数 handle_info(Info, State) 去处理。如果 gen_server  进程连接到其他进程（不是监督者进程）并且捕获出口信号，则需要去实现 code_change 函数。
