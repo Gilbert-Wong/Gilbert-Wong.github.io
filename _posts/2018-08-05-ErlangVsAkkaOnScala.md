@@ -1,5 +1,5 @@
 ---
-title: mqtt 学习笔记(2)
+title: Erlang vs Akka on Scala
 date: 2018-08-05
 category: 
 - Program Language
