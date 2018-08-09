@@ -2,7 +2,7 @@
 title: 树莓派上手配置
 date: 2018-08-05
 category: 
-- 运维
+- Management information system
 tags:
 - Raspberry
 - erlang
