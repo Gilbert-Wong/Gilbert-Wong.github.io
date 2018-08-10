@@ -1,5 +1,5 @@
 ---
-title: 树莓派上手配置
+title: 树莓派 Erlang 环境配置
 date: 2018-08-05
 category: 
 - Management information system
@@ -284,4 +284,41 @@ asdf global erlang 21.0.4
 
 现在可以在上面跑我们的 Erlang 应用了。
 
+## Privoxy 安装配置
+
+这里为什么我们要在安装 `ProxyChains` 后还要去加一层 http 代理？因为 `proxychains` 构建 Erlang 应用的通用工具 `rebar3`
+无法使用 proxychains，至于为什么无法使用？ 我不知道，但是可以参考这条 stackoverflow 上的
+[回答](https://stackoverflow.com/a/51202404/8490474)，用 Privoxy 做 http 代理或许可以解决问题。
+
+首先输入命令安装：
+```bash
+apt install privoxy -y
+```
+然后编辑 `/etc/profile` 编写转发转发配置：
+
+```bash
+> vim /etc/profile
+export http_proxy=http://127.0.0.1:8118
+export https_proxy=http://127.0.0.1:8118
+> source /etc/profile
+```
+
+ 也可以先在当前 session 中执行
+```bash
+export http_proxy=http://127.0.0.1:8118
+export https_proxy=http://127.0.0.1:8118
+```
+
+然后修改 privoxy 的配置文件:
+```bash
+> vim /etc/privoxy/config
+```
+将 `#forward-socks5t   /   127.0.0.1:9050` 改为 `forward-socks5t  / 127.0.0.1:1080`。
+
+测试翻墙
+```
+curl www.google.com
+```
+
+如果没有成功，请尝试重启 shadowsocks-libev 和 privoxy 再测试。
 
