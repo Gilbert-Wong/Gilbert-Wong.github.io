@@ -300,7 +300,7 @@ apt install privoxy -y
 > vim /etc/profile
 export http_proxy=http://127.0.0.1:8118
 export https_proxy=http://127.0.0.1:8118
-> source /etc/profile
+> source ~/.zshrc
 ```
 
  也可以先在当前 session 中执行
