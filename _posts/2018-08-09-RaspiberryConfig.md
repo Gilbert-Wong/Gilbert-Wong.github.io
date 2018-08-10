@@ -242,7 +242,7 @@ proxychains asdf install erlang 21.0.4
 
 ```bash
 # Install Java Development Kit
-apt install openjdk-9-jdk erlang-wx -y
+apt install openjdk-9-jdk -y
 
 # Install the build tools (dpkg-dev g++ gcc libc6-dev make)
 apt-get -y install build-essential
@@ -257,7 +257,7 @@ apt-get -y install autoconf
 apt-get -y install libncurses5-dev
 
 # For building with wxWidgets (observer needs this)
-apt-get -y install libwxgtk2.8-dev libgl1-mesa-dev libglu1-mesa-dev libpng-dev
+apt-get -y install libwxgtk2.8-dev libgl1-mesa-dev libglu1-mesa-dev libpng-dev erlang-wx
 
 # For building ssl (libssh-4 libssl-dev zlib1g-dev)
 apt-get -y install libssh-dev libssl-dev
