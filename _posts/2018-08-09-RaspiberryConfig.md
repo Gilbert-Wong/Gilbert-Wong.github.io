@@ -322,3 +322,5 @@ curl www.google.com
 
 如果没有成功，请尝试重启 shadowsocks-libev 和 privoxy 再测试。
 
+
+如果全部安装配置好，就可以开始正常地构建 Erlang 应用了。
