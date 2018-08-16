@@ -136,19 +136,36 @@ cd /opt && ./kafka_2.12-1.0.0/bin/kafka-console-producer.sh --broker-list 172.17
 
 安装 kafka 只需要执行 ```brew install kafka```　就能把最新版的 kafka 以及相应的依赖全部安装到本机中。
 
-注：为什么这里我们不把 kafka 安装包放在/opt 目录？ 因为每次在 opt 目录操作都需要临时提权 root，这是有安全风险的，而且苹果官方也不推荐这么做，在更新 kafka 软件包的时候也没有使用`homebrew`包管理器来的方便。
+注：为什么这里我们不把 kafka 安装包放在/opt 目录？ 因为每次在 opt 目录操作都需要临时提权 root，这是有安全风险的，能在不调用 root 权限的情况下做到的事就尽量不要用，在更新 kafka 软件包的时候也没有使用`homebrew`包管理器来的方便。
 
 如果已经把 homebrew 安装的程序目录添加到自己的 shell path 中的话，那就可以在任意目录底下执行 zookeeper 和 kakfa 的命令，由于开发机上的 kafka 的单机单结点，如果没有特殊需要甚至可以不做任何配置就拿来用，homebrew 安装的 kafka 的所有命令可以在/usr/local/bin 目录下找到，它们都是链接到/usr/local/Cellar/kafka/1.1.0/bin 目录下可执行程序的软链接。配置文件在/usr/local/etc/kafka 目录下。
+
+homebrew 安装的 kafka 有两种启动方式：
+
+一种是作为后台服务启动：
+
+```bash
+brew services start kafka
+```
+
+另一种是直接命令启动：
+
+```bash
+zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties & kafka-server-start /usr/local/etc/kafka/server.properties
+```
 
 启动 kafka 程序的时候只需在终端下执行下面两条命令就可以了:
 ```bash
 zkServer start
 kafka-server-start /usr/local/etc/kafka/server.properties&
 ```
-接下来就可以用 `kafka-*` 命令去随便怎么操作 kafka 了。
+
 关闭 kafka 服务器的时候先后执行以下两条命令:
 ```bash
 kafka-server-stop
 zkServer stop
 ```
 就可以正常关闭了。
+
+kafka 的相关命令都在 `/usr/local/bin` 路径中，配置文件则都在 `/usr/local/etc/kafka` 路径中。
+
