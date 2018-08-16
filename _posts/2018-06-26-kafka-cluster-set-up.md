@@ -154,12 +154,6 @@ brew services start kafka
 zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties & kafka-server-start /usr/local/etc/kafka/server.properties
 ```
 
-启动 kafka 程序的时候只需在终端下执行下面两条命令就可以了:
-```bash
-zkServer start
-kafka-server-start /usr/local/etc/kafka/server.properties&
-```
-
 关闭 kafka 服务器的时候先后执行以下两条命令:
 ```bash
 kafka-server-stop
