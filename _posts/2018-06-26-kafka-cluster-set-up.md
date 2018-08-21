@@ -161,5 +161,29 @@ zkServer stop
 ```
 就可以正常关闭了。
 
-kafka 的相关命令都在 `/usr/local/bin` 路径中，配置文件则都在 `/usr/local/etc/kafka` 路径中。
+## kafka 的相关命令
 
+都在 `/usr/local/bin` 路径中，配置文件则都在 `/usr/local/etc/kafka` 路径中。
+
+这里列举一些，kafka 最常见的几条命令：
+
+Topic 创建：
+
+```bash
+kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic client-connected
+```
+
+Topic 删除：
+```bash
+kafka-topics --delete --zookeeper localhost:2181 --topic client-connected
+```
+
+终端消费 Topic
+```bash
+kafka-console-consumer --bootstrap-server localhost:9092 --topic client-connected
+```
+
+终端从最初消息开始消费 Topic 
+```bash
+kafka-console-consumer --bootstrap-server localhost:9092 --topic client-connected --from-beginning
+```
