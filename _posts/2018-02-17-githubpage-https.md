@@ -2,12 +2,11 @@
 title: github page给自定义域名加上小绿锁
 date: 2018-02-17
 category: 
-- Management information system
+- Tooltips
 tags:
 - githubpage
 - https
 - cloudflare
-- 运维
 ---
 
 ## 目的
